@@ -1,7 +1,84 @@
-* {
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;300;400&display=swap');
+
+:root {
+  --red: #e50914;
+  --black: #141414;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* elementos base */
+
 body {
-  background-color: aqua;
+  background-color: var(--black);
+  color: white;
+}
+
+header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  color: var(--red);
+  font-family: 'Bebas Neue', cursive;
+  font-size: 40px;
+  margin-left: 10px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #aaa;
+  margin-right: 10px;
+}
+
+header nav a:hover {
+  color: #fff;
+}
+
+/* filme principal */
+.main-movie {
+  font-size: 16px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)100%), url('../img/capa-batman.jpg');
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-movie .description {
+  margin-bottom: 36px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-movie .title {
+  font-size: 40px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.button {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 16px 32px;
+  margin-right: 8px;
+  transition: 0.3s ease-in;
+}
+
+.button i {
+  margin-right: 8px;
+}
+
+.button:hover {
+  background-color: var(--red);
 }
